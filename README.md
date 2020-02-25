@@ -18,4 +18,5 @@ update [arg1] [arg2] // arg1 = header name, arg2 = new value
 2. Can modify protected headers too. *Oops! Bad :|*
 3. Ignores COMMENT and HISTORY headers
 4. Cannot modify comments.
+5. No Type Checking
 
