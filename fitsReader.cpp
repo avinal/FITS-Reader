@@ -9,6 +9,7 @@
 #include <boost/algorithm/string.hpp>
 #include <boost/lexical_cast.hpp>
 #include <algorithm>
+#include <iterator>
 
 /*
 A Structure to store 80 character headers.
@@ -27,14 +28,13 @@ What it can do?
 Limitaions:
 1. Only 20 character integer or float.
 2. Comment may be distoted after modification.
-3. Can't modify comments.
-4. Ignores 'COMMENT' and 'HISTORY' keywords.
-5. Can't read extensions if any.
+3. Can't read extensions if any.
 */
 class readfits
 {
-    std::map<std::string, fits> token;        /*Map to store keywords their value and position */
+    std::multimap<std::string, fits> token;   /*Map to store keywords their value and position */
     void extract_headers(std::fstream &file); /*Function for read headers*/
+    void write_headers(std::string key, std::string replace, int position, int token_len);
     std::string file_name;
 
 public:
@@ -51,7 +51,7 @@ public:
 
 /*
 Arguments: 'file' -> File object corresponding to file name.
-Extracts the headers from fits file and stores in map.
+Extracts the headers from fits file and stores in multimap.
 */
 void readfits::extract_headers(std::fstream &file)
 {
@@ -65,24 +65,25 @@ void readfits::extract_headers(std::fstream &file)
         // read 80 character
         std::string word(cutset);
 
-        /*
-Ignoring HISTORY and COMMENT keywords for simplicity.
-*/
-        if (word.at(0) == '/' ||
-            !word.substr(0, 7).compare("HISTORY") ||
-            !word.substr(0, 7).compare("COMMENT"))
-        {
-            continue;
-        }
+        std::string key_, second; /*Seperates keyword and value*/
 
-        std::string key_ = word.substr(0, 8), second = word.substr(10, 70); /*Seperates keyword and value*/
+        key_ = word.substr(0, 8);
+
         //Trim Whitespaces
         boost::algorithm::trim(key_);
+        if (!key_.compare("HISTORY") || !key_.compare("COMMENT"))
+        {
+            second = word.substr(8, 72);
+        }
+        else
+        {
+            second = word.substr(10, 70);
+        }
         boost::algorithm::trim(second);
         temp.keyword = key_;
         temp.value = second;
 
-        token.emplace(key_, temp); //Store into map
+        token.emplace(key_, temp); //Store into multimap
 
         if (!word.substr(0, 3).compare("END")) //Stop reading condition
         {
@@ -98,20 +99,37 @@ Modifies the current value of the header
 */
 void readfits::update_headers(std::string key)
 {
-    std::fstream writer(file_name, std::ios::in | std::ofstream::binary | std::ios::out);
-    fits refer = token[key];
     std::string update_string;
+    std::getline(std::cin, update_string, '\n');
+    auto token_it = token.equal_range(key);
+    fits refer = token_it.first->second;
+    int update_position = refer.position;
     std::string replace;
     replace = key;
     int token_length = replace.length();
+    if (!key.compare("COMMENT") || !key.compare("HISTORY"))
+    {
+        display(key);
+        std::cout << "Enter the position of the header you want to change" << std::endl;
+        std::cin >> update_position;
+        replace += " ";
+        replace += update_string;
+        token_length += update_string.length() + 1;
+        write_headers(key, replace, update_position, token_length);
+        return;
+    }
+    else if (!key.compare("SIMPLE") ||
+             !key.compare("BITPIX") ||
+             !key.compare("NAXIS") ||
+             !key.compare("END"))
+    {
+        std::cerr << "Mandatory keywords cannot be modified !!" << std::endl;
+        return;
+    }
 
     /*
     Reformatting of the update string according to the FITS standards.
     */
-replace_routine:
-{
-    std::getline(std::cin, update_string, '\n');
-
     while (token_length < 8) /*turns 'KEYWORD' into 'KEYWORD = ' 10 character string*/
     {
         replace += " ";
@@ -167,37 +185,52 @@ Checks if value is logical E.g. 'T' or 'F'
     }
     replace += " ";
     token_length++;
-}
 
     /*
 Append the previous comment if any
 */
     int comm_len = refer.value.length();
     char limit = refer.value.at(comm_len - 1);
-    while (limit != '/')
+    while (limit != '/' && comm_len > 0)
     {
         comm_len--;
         limit = refer.value.at(comm_len);
     }
-    std::string app_comment = refer.value.substr(comm_len - 1, refer.value.length());
+    std::string app_comment;
+    if (!comm_len)
+    {
+        app_comment = "";
+    }
+    else
+    {
+        app_comment = refer.value.substr(comm_len - 1, refer.value.length());
+    }
     boost::trim(app_comment);
     replace += app_comment;
     token_length += app_comment.length();
+    write_headers(key, replace, update_position, token_length);
+}
 
+void readfits::write_headers(std::string key,
+                             std::string replace,
+                             int position,
+                             int token_len)
+{
+    std::fstream writer(file_name, std::ios::in | std::ofstream::binary | std::ios::out);
     /*
     Check if new token is of correct length or not. 
     */
-    if (token_length > 80)
+    if (token_len > 80)
     {
         std::cerr << "Some error occored, please enter again" << std::endl;
         replace = replace.substr(0, 80);
     }
     else
     {
-        while (token_length < 80)
+        while (token_len < 80)
         {
             replace += " ";
-            token_length++;
+            token_len++;
         }
     }
     replace += "\0"; //Terminates the update string
@@ -208,12 +241,12 @@ Append the previous comment if any
     Seeks to the file postion of the keyword and then writes 
     80 characters.
     */
-    writer.seekp(refer.position);
+    writer.seekp(position);
     writer.write(replace.c_str(), 80);
     writer.close();
 
     /*
-    Reruns the extract header routine to update the value in the map.
+    Reruns the extract header routine to update the value in the multimap.
     */
     std::fstream updated(file_name, std::ios::in | std::ios::binary);
     extract_headers(updated);
@@ -238,7 +271,19 @@ void readfits::display(std::string command)
     }
     else
     {
-        std::cout << std::setw(10) << command << std::setw(75) << token[command].value << std::endl;
+        auto token_range = token.equal_range(command);
+
+        if (!command.compare("COMMENT") || !command.compare("HISTORY"))
+        {
+            std::cout << "There are multiple entries for the given keywords." << std::endl;
+        }
+
+        for (auto it = token_range.first; it != token_range.second; it++)
+        {
+            std::cout << std::setw(10) << it->first
+                      << std::setw(75) << it->second.value
+                      << std::setw(10) << it->second.position << std::endl;
+        }
     }
 }
 
