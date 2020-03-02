@@ -12,11 +12,10 @@ update [arg1] [arg2] // arg1 = header name, arg2 = new value
 ## What is working?
 1. Read headers.
 2. Modifies the headers
+3. Modifies COMMENT and HISTORY keywords too.
+4. Mandotory keywords are write protected.
 
 ## Limitations
 1. Cannot read Extentions.
-2. Can modify protected headers too. *Oops! Bad :|*
-3. Ignores COMMENT and HISTORY headers
-4. Cannot modify comments.
-5. No Type Checking
+2. No Type Checking
 
