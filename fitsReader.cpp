@@ -10,6 +10,7 @@
 #include <boost/lexical_cast.hpp>
 #include <algorithm>
 #include <iterator>
+#include <cstdlib>
 
 /*
 A Structure to store 80 character headers.
@@ -32,8 +33,10 @@ Limitaions:
 */
 class readfits
 {
-    std::multimap<std::string, fits> token;   /*Map to store keywords their value and position */
-    void extract_headers(std::fstream &file); /*Function for read headers*/
+    std::multimap<std::string, fits> token; /*Map to store keywords their value and position */
+    std::multimap<std::string, fits> xtoken;
+    void extract_headers(std::fstream &file);   /*Function for read headers*/
+    void extract_extension(std::fstream &file); /*Function to read Extensions*/
     void write_headers(std::string key, std::string replace, int position, int token_len);
     std::string file_name;
 
@@ -43,6 +46,7 @@ public:
         file_name = name;
         std::fstream file(name, std::ios::in | std::ios::binary);
         extract_headers(file);
+        extract_extension(file);
     }
 
     void update_headers(std::string); /*Function for modify headers*/
@@ -84,6 +88,75 @@ void readfits::extract_headers(std::fstream &file)
         temp.value = second;
 
         token.emplace(key_, temp); //Store into multimap
+
+        if (!word.substr(0, 3).compare("END")) //Stop reading condition
+        {
+            break;
+        }
+    }
+}
+
+void readfits::extract_extension(std::fstream &file)
+{
+    fits end_tok = token.find("END")->second;
+    int end_pos = end_tok.position;
+    end_tok = token.find("NAXIS")->second;
+    std::string naxistr = end_tok.value;
+    int naxis = boost::lexical_cast<int>(naxistr.substr(0, naxistr.find(" ")));
+    int naxisn[naxis];
+    long dat = 1;
+    for (int i = 1; i <= naxis; i++)
+    {
+        std::string nstr = "NAXIS" + std::to_string(i);
+        end_tok = token.find(nstr)->second;
+        std::string naxisnstr = end_tok.value;
+        naxisn[i - 1] = boost::lexical_cast<int>(naxisnstr.substr(0, naxisnstr.find(" ")));
+        dat *= naxisn[i - 1];
+    }
+    end_tok = token.find("BITPIX")->second;
+    std::string bitstr = end_tok.value;
+    int bitpix = boost::lexical_cast<int>(bitstr.substr(0, bitstr.find(" ")));
+    dat *= (abs(bitpix) / 8);
+    end_pos = (end_pos % 2880 == 0) ? end_pos / 2880 : end_pos / 2880 + 1;
+    dat = (dat % 2880 == 0) ? dat / 2880 : dat / 2880 + 1;
+    int xtn_pos = 2880 * (end_pos + dat);
+    file.seekg(0, std::ios::end);
+    if (xtn_pos >= file.tellg())
+    {
+        std::cout << "Reached end of file. No Extensions !!";
+        file.close();
+        return;
+    }
+    file.seekg(xtn_pos);
+    fits temp;
+    char cutset[80];
+    xtoken.clear();
+    while (true)
+    {
+        temp.position = file.tellp();
+        file.read(cutset, 80);
+        // read 80 character
+        std::string word(cutset);
+
+        std::string key_, second; /*Seperates keyword and value*/
+
+        key_ = word.substr(0, 8);
+
+        //Trim Whitespaces
+        boost::algorithm::trim(key_);
+        if (!key_.compare("HISTORY") || !key_.compare("COMMENT"))
+        {
+            second = word.substr(8, 72);
+        }
+        else
+        {
+            second = word.substr(10, 70);
+        }
+        boost::algorithm::trim(second);
+        temp.keyword = key_;
+        temp.value = second;
+
+        xtoken.emplace(key_, temp); //Store into multimap
 
         if (!word.substr(0, 3).compare("END")) //Stop reading condition
         {
@@ -227,11 +300,8 @@ void readfits::write_headers(std::string key,
     }
     else
     {
-        while (token_len < 80)
-        {
-            replace += " ";
-            token_len++;
-        }
+        replace.append(80 - token_len, ' ');
+        token_len = replace.length();
     }
     replace += "\0"; //Terminates the update string
 
@@ -267,6 +337,23 @@ void readfits::display(std::string command)
             std::cout << std::setw(10) << par.first
                       << std::setw(75) << par.second.value
                       << std::setw(10) << par.second.position << std::endl;
+        }
+        std::cout << std::endl
+                  << "extension\n";
+        for (auto &&xpar : xtoken)
+        {
+            std::cout << std::setw(10) << xpar.first
+                      << std::setw(75) << xpar.second.value
+                      << std::setw(10) << xpar.second.position << std::endl;
+        }
+    }
+    else if (!command.compare("XTENSION"))
+    {
+        for (auto &&xpar : xtoken)
+        {
+            std::cout << std::setw(10) << xpar.first
+                      << std::setw(75) << xpar.second.value
+                      << std::setw(10) << xpar.second.position << std::endl;
         }
     }
     else
