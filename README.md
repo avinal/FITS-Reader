@@ -21,5 +21,5 @@ update [arg1] [arg2] // arg1 = header name, arg2 = new value
 5. Can read first encountered extension.
 
 ## Limitations
-2. No Type Checking
+1. No Type Checking
 
