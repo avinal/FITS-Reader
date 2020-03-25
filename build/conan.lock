@@ -8,7 +8,7 @@
     "requires": [
      "1"
     ],
-    "path": "Z:\\VSProjects\\fitsReader\\conanfile.txt"
+    "path": "Z:\\VSProjects\\git\\fitsReader\\conanfile.txt"
    },
    "1": {
     "pref": "boost/1.72.0#0:4d6b0a96fb1ef7b88e9a4ae010324f10dd9567e8#0",

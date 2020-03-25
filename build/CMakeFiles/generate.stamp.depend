@@ -85,9 +85,9 @@ C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/Common
 C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.16/Modules/Platform/Windows-MSVC.cmake
 C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.16/Modules/Platform/Windows.cmake
 C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.16/Modules/Platform/WindowsPaths.cmake
-Z:/VSProjects/fitsReader/CMakeLists.txt
-Z:/VSProjects/fitsReader/build/CMakeFiles/3.16.19112601-MSVC_2/CMakeCCompiler.cmake
-Z:/VSProjects/fitsReader/build/CMakeFiles/3.16.19112601-MSVC_2/CMakeCXXCompiler.cmake
-Z:/VSProjects/fitsReader/build/CMakeFiles/3.16.19112601-MSVC_2/CMakeRCCompiler.cmake
-Z:/VSProjects/fitsReader/build/CMakeFiles/3.16.19112601-MSVC_2/CMakeSystem.cmake
-Z:/VSProjects/fitsReader/build/conanbuildinfo.cmake
+Z:/VSProjects/git/fitsReader/CMakeLists.txt
+Z:/VSProjects/git/fitsReader/build/CMakeFiles/3.16.19112601-MSVC_2/CMakeCCompiler.cmake
+Z:/VSProjects/git/fitsReader/build/CMakeFiles/3.16.19112601-MSVC_2/CMakeCXXCompiler.cmake
+Z:/VSProjects/git/fitsReader/build/CMakeFiles/3.16.19112601-MSVC_2/CMakeRCCompiler.cmake
+Z:/VSProjects/git/fitsReader/build/CMakeFiles/3.16.19112601-MSVC_2/CMakeSystem.cmake
+Z:/VSProjects/git/fitsReader/build/conanbuildinfo.cmake

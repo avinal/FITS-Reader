@@ -11,7 +11,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "z:/VSProjects/fitsReader/build"
+			"value" : "z:/VSProjects/git/fitsReader/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -463,7 +463,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "Z:/VSProjects/fitsReader"
+			"value" : "Z:/VSProjects/git/fitsReader"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -987,7 +987,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Z:/VSProjects/fitsReader/build"
+			"value" : "Z:/VSProjects/git/fitsReader/build"
 		},
 		{
 			"name" : "fitsReader_SOURCE_DIR",
@@ -999,7 +999,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Z:/VSProjects/fitsReader"
+			"value" : "Z:/VSProjects/git/fitsReader"
 		}
 	],
 	"kind" : "cache",

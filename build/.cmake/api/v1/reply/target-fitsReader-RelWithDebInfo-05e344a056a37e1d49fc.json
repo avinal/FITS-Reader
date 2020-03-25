@@ -111,7 +111,7 @@
 				},
 				{
 					"backtrace" : 8,
-					"path" : "Z:/VSProjects/fitsReader/include"
+					"path" : "Z:/VSProjects/git/fitsReader/include"
 				}
 			],
 			"language" : "CXX",
@@ -158,7 +158,7 @@
 			},
 			{
 				"backtrace" : 5,
-				"fragment" : "-LIBPATH:Z:\\VSProjects\\fitsReader\\lib",
+				"fragment" : "-LIBPATH:Z:\\VSProjects\\git\\fitsReader\\lib",
 				"role" : "libraryPath"
 			},
 			{

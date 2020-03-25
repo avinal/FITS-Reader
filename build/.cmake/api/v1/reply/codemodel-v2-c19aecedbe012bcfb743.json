@@ -42,21 +42,21 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-Debug-349492185bcb425f8774.json",
+					"jsonFile" : "target-ALL_BUILD-Debug-8b34b7c70fbe868b164a.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ZERO_CHECK-Debug-75e2a7b4694094a434e3.json",
+					"jsonFile" : "target-ZERO_CHECK-Debug-c672f618a3b8da15f53f.json",
 					"name" : "ZERO_CHECK",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "fitsReader::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-fitsReader-Debug-5045714ae38f5e48e728.json",
+					"jsonFile" : "target-fitsReader-Debug-0b8ed8163b8921229082.json",
 					"name" : "fitsReader",
 					"projectIndex" : 0
 				}
@@ -103,21 +103,21 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-Release-349492185bcb425f8774.json",
+					"jsonFile" : "target-ALL_BUILD-Release-8b34b7c70fbe868b164a.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ZERO_CHECK-Release-75e2a7b4694094a434e3.json",
+					"jsonFile" : "target-ZERO_CHECK-Release-c672f618a3b8da15f53f.json",
 					"name" : "ZERO_CHECK",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "fitsReader::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-fitsReader-Release-68f0007f82a345a68c42.json",
+					"jsonFile" : "target-fitsReader-Release-8e4988c9da45cd89e63a.json",
 					"name" : "fitsReader",
 					"projectIndex" : 0
 				}
@@ -164,21 +164,21 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-MinSizeRel-349492185bcb425f8774.json",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-8b34b7c70fbe868b164a.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ZERO_CHECK-MinSizeRel-75e2a7b4694094a434e3.json",
+					"jsonFile" : "target-ZERO_CHECK-MinSizeRel-c672f618a3b8da15f53f.json",
 					"name" : "ZERO_CHECK",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "fitsReader::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-fitsReader-MinSizeRel-e363be96d3252e3482e6.json",
+					"jsonFile" : "target-fitsReader-MinSizeRel-97e989532b8a0a10e6c0.json",
 					"name" : "fitsReader",
 					"projectIndex" : 0
 				}
@@ -225,21 +225,21 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-349492185bcb425f8774.json",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-8b34b7c70fbe868b164a.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ZERO_CHECK-RelWithDebInfo-75e2a7b4694094a434e3.json",
+					"jsonFile" : "target-ZERO_CHECK-RelWithDebInfo-c672f618a3b8da15f53f.json",
 					"name" : "ZERO_CHECK",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "fitsReader::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-fitsReader-RelWithDebInfo-4c7bc9e289cf53dc5965.json",
+					"jsonFile" : "target-fitsReader-RelWithDebInfo-05e344a056a37e1d49fc.json",
 					"name" : "fitsReader",
 					"projectIndex" : 0
 				}
@@ -249,8 +249,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "Z:/VSProjects/fitsReader/build",
-		"source" : "Z:/VSProjects/fitsReader"
+		"build" : "Z:/VSProjects/git/fitsReader/build",
+		"source" : "Z:/VSProjects/git/fitsReader"
 	},
 	"version" : 
 	{

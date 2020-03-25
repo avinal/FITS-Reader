@@ -88,7 +88,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc   /MD /O1 /Ob1 /DNDEBUG  "
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc   /MD /O2 /Ob2 /DNDEBUG   "
 				},
 				{
 					"backtrace" : 6,
@@ -111,7 +111,7 @@
 				},
 				{
 					"backtrace" : 8,
-					"path" : "Z:/VSProjects/fitsReader/include"
+					"path" : "Z:/VSProjects/git/fitsReader/include"
 				}
 			],
 			"language" : "CXX",
@@ -134,11 +134,11 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc   /MD /O1 /Ob1 /DNDEBUG",
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc   /MD /O2 /Ob2 /DNDEBUG",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "/machine:x64   /INCREMENTAL:NO /subsystem:console",
+				"fragment" : "/machine:x64   /INCREMENTAL:NO  /subsystem:console",
 				"role" : "flags"
 			},
 			{
@@ -158,7 +158,7 @@
 			},
 			{
 				"backtrace" : 5,
-				"fragment" : "-LIBPATH:Z:\\VSProjects\\fitsReader\\lib",
+				"fragment" : "-LIBPATH:Z:\\VSProjects\\git\\fitsReader\\lib",
 				"role" : "libraryPath"
 			},
 			{

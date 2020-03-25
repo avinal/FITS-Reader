@@ -9,8 +9,8 @@ The output was:
 Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 25-03-2020 09:50:56.
-Project "Z:\VSProjects\fitsReader\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
+Build started 25-03-2020 10:15:06.
+Project "Z:\VSProjects\git\fitsReader\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
   Creating directory "Debug\CompilerIdC.tlog\".
@@ -21,7 +21,7 @@ ClCompile:
   CMakeCCompilerId.c
 Link:
   C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X64 Debug\CMakeCCompilerId.obj
-  CompilerIdC.vcxproj -> Z:\VSProjects\fitsReader\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdC\.\CompilerIdC.exe
+  CompilerIdC.vcxproj -> Z:\VSProjects\git\fitsReader\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdC\.\CompilerIdC.exe
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
   :VCEnd
@@ -29,20 +29,20 @@ PostBuildEvent:
 FinalizeBuildStatus:
   Deleting file "Debug\CompilerIdC.tlog\unsuccessfulbuild".
   Touching "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
-Done Building Project "Z:\VSProjects\fitsReader\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdC\CompilerIdC.vcxproj" (default targets).
+Done Building Project "Z:\VSProjects\git\fitsReader\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdC\CompilerIdC.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.35
+Time Elapsed 00:00:01.79
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
 
-The C compiler identification is MSVC, found in "Z:/VSProjects/fitsReader/build/CMakeFiles/3.16.19112601-MSVC_2/CompilerIdC/CompilerIdC.exe"
+The C compiler identification is MSVC, found in "Z:/VSProjects/git/fitsReader/build/CMakeFiles/3.16.19112601-MSVC_2/CompilerIdC/CompilerIdC.exe"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler:  
@@ -54,8 +54,8 @@ The output was:
 Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 25-03-2020 09:50:58.
-Project "Z:\VSProjects\fitsReader\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
+Build started 25-03-2020 10:15:09.
+Project "Z:\VSProjects\git\fitsReader\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
   Creating directory "Debug\CompilerIdCXX.tlog\".
@@ -66,7 +66,7 @@ ClCompile:
   CMakeCXXCompilerId.cpp
 Link:
   C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X64 Debug\CMakeCXXCompilerId.obj
-  CompilerIdCXX.vcxproj -> Z:\VSProjects\fitsReader\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdCXX\.\CompilerIdCXX.exe
+  CompilerIdCXX.vcxproj -> Z:\VSProjects\git\fitsReader\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdCXX\.\CompilerIdCXX.exe
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
   :VCEnd
@@ -74,74 +74,74 @@ PostBuildEvent:
 FinalizeBuildStatus:
   Deleting file "Debug\CompilerIdCXX.tlog\unsuccessfulbuild".
   Touching "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate".
-Done Building Project "Z:\VSProjects\fitsReader\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdCXX\CompilerIdCXX.vcxproj" (default targets).
+Done Building Project "Z:\VSProjects\git\fitsReader\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdCXX\CompilerIdCXX.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.11
+Time Elapsed 00:00:01.72
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
 
-The CXX compiler identification is MSVC, found in "Z:/VSProjects/fitsReader/build/CMakeFiles/3.16.19112601-MSVC_2/CompilerIdCXX/CompilerIdCXX.exe"
+The CXX compiler identification is MSVC, found in "Z:/VSProjects/git/fitsReader/build/CMakeFiles/3.16.19112601-MSVC_2/CompilerIdCXX/CompilerIdCXX.exe"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: Z:/VSProjects/fitsReader/build/CMakeFiles/CMakeTmp
+Change Dir: Z:/VSProjects/git/fitsReader/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_f29b6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Framework
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_c7f1a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.25.28610.4 for x64
   testCCompiler.c
   Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f29b6.dir\Debug\\" /Fd"cmTC_f29b6.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue Z:\VSProjects\fitsReader\build\CMakeFiles\CMakeTmp\testCCompiler.c
-  cmTC_f29b6.vcxproj -> Z:\VSProjects\fitsReader\build\CMakeFiles\CMakeTmp\Debug\cmTC_f29b6.exe
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c7f1a.dir\Debug\\" /Fd"cmTC_c7f1a.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue Z:\VSProjects\git\fitsReader\build\CMakeFiles\CMakeTmp\testCCompiler.c
+  cmTC_c7f1a.vcxproj -> Z:\VSProjects\git\fitsReader\build\CMakeFiles\CMakeTmp\Debug\cmTC_c7f1a.exe
 
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: Z:/VSProjects/fitsReader/build/CMakeFiles/CMakeTmp
+Change Dir: Z:/VSProjects/git/fitsReader/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_5ad0f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Framework
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_6e280.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.25.28610.4 for x64
   CMakeCCompilerABI.c
   Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5ad0f.dir\Debug\\" /Fd"cmTC_5ad0f.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeCCompilerABI.c"
-  cmTC_5ad0f.vcxproj -> Z:\VSProjects\fitsReader\build\CMakeFiles\CMakeTmp\Debug\cmTC_5ad0f.exe
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6e280.dir\Debug\\" /Fd"cmTC_6e280.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeCCompilerABI.c"
+  cmTC_6e280.vcxproj -> Z:\VSProjects\git\fitsReader\build\CMakeFiles\CMakeTmp\Debug\cmTC_6e280.exe
 
 
 
 Determining if the CXX compiler works passed with the following output:
-Change Dir: Z:/VSProjects/fitsReader/build/CMakeFiles/CMakeTmp
+Change Dir: Z:/VSProjects/git/fitsReader/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_e4a87.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Framework
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_d8c84.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.25.28610.4 for x64
   testCXXCompiler.cxx
   Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_e4a87.dir\Debug\\" /Fd"cmTC_e4a87.dir\Debug\vc142.pdb" /Gd /TP /errorReport:queue Z:\VSProjects\fitsReader\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
-  cmTC_e4a87.vcxproj -> Z:\VSProjects\fitsReader\build\CMakeFiles\CMakeTmp\Debug\cmTC_e4a87.exe
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_d8c84.dir\Debug\\" /Fd"cmTC_d8c84.dir\Debug\vc142.pdb" /Gd /TP /errorReport:queue Z:\VSProjects\git\fitsReader\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
+  cmTC_d8c84.vcxproj -> Z:\VSProjects\git\fitsReader\build\CMakeFiles\CMakeTmp\Debug\cmTC_d8c84.exe
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: Z:/VSProjects/fitsReader/build/CMakeFiles/CMakeTmp
+Change Dir: Z:/VSProjects/git/fitsReader/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_c0ac8.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Framework
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_aa961.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.25.28610.4 for x64
   CMakeCXXCompilerABI.cpp
   Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_c0ac8.dir\Debug\\" /Fd"cmTC_c0ac8.dir\Debug\vc142.pdb" /Gd /TP /errorReport:queue "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeCXXCompilerABI.cpp"
-  cmTC_c0ac8.vcxproj -> Z:\VSProjects\fitsReader\build\CMakeFiles\CMakeTmp\Debug\cmTC_c0ac8.exe
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_aa961.dir\Debug\\" /Fd"cmTC_aa961.dir\Debug\vc142.pdb" /Gd /TP /errorReport:queue "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeCXXCompilerABI.cpp"
+  cmTC_aa961.vcxproj -> Z:\VSProjects\git\fitsReader\build\CMakeFiles\CMakeTmp\Debug\cmTC_aa961.exe
 
 
 
