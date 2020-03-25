@@ -3,11 +3,22 @@ FITS file read and modify.
 
 # How to build
 1. This program uses conan as package manager make sure to config conan before building
-2. For Windows use cmake 
+2. For Windows using cmake and conan
    ```
+   cd build
+   conan install ..
    cmake .. -G "Visual Studio 16"
    cmake --build . --config Release
    ```
+3. For Linux Systems using cmake
+   first clear build directory.
+   ```
+   cd build
+   conan install ..
+   cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
+   cmake --build .
+   ```
+4. Don't forget to put FITS file in fitsReader/build/bin directory or provide full path
 
 # Usage
 Input file name with .fits extension.
