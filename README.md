@@ -1,5 +1,13 @@
-# fitsOps
+# fitsReader
 FITS file read and modify.
+
+# How to build
+1. This program uses conan as package manager make sure to config conan before building
+2. For Windows use cmake 
+   ```
+   cmake .. -G "Visual Studio 16"
+   cmake --build . --config Release
+   ```
 
 # Usage
 Input file name with .fits extension.
