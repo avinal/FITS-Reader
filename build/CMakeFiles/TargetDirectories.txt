@@ -1,3 +1,0 @@
-Z:/VSProjects/git/fitsReader/build/CMakeFiles/fitsReader.dir
-Z:/VSProjects/git/fitsReader/build/CMakeFiles/ALL_BUILD.dir
-Z:/VSProjects/git/fitsReader/build/CMakeFiles/ZERO_CHECK.dir
