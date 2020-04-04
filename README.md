@@ -52,4 +52,5 @@ update [arg1] [arg2] // arg1 = header name, arg2 = new value
 
 ## Limitations
 1. No Type Checking
+2. If the file is not correct by even 1 byte, the program exits.
 
